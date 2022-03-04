@@ -1,0 +1,63 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Sansita+Swashed:wght@300&family=Shippori+Antique+B1&display=swap');
+
+/* Basic styles */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+/* End Basic styles */
+
+/* Variables */
+:root {
+    --primary: #D15B91;
+    --secondary: #A05868;
+    --yellow: #BFB63B;
+    --mustard: #B8B63E;
+    --background: #B59A9E;
+    --light-white: #F2F2F2;
+    --dark: #2B2B2B;
+    --primary-font: 'Shippori Antique B1', sans-serif;
+    --secondary-font: 'Anton', sans-serif;
+    --special-font: 'Sansita Swashed', sans-serif;
+}
+/* End variables */
+
+/* Helpers */
+
+.display-row {
+    display: flex;
+}
+
+.display-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End Helpers
+
+/* Home */
+
+
+
+/* End home */
