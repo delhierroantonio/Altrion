@@ -28,6 +28,10 @@ html {
     --secondary-font: 'Anton', sans-serif;
     --special-font: 'Sansita Swashed', sans-serif;
 }
+
+body {
+    height: 100vh;
+}
 /* End variables */
 
 /* Helpers */
@@ -56,8 +60,50 @@ a {
 
 /* End Helpers
 
+/* Layout */
+#home {
+    display: grid;
+    grid-template-areas: 
+    "aside header header header"
+    "aside section section section"
+    "aside footer footer footer";
+    grid-template-columns: 3%;
+    grid-template-rows: 30% 1fr 1fr;
+}
+
+aside {
+    grid-area: aside;
+}
+
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* End Layout */
+
 /* Home */
+.header {
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+.header__content {
+    justify-content: center;
+    align-items: center;
+}
 
-
+.header__title {
+    font-family: var(--special-font);
+    color: var(--light-white);
+    font-size: 5em;
+}
 /* End home */
