@@ -1,6 +1,9 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Sansita+Swashed:wght@300&family=Shippori+Antique+B1&display=swap');
-
+@font-face {
+    font-family: Voice in my head;
+    src: url(../fonts/Voice\ In\ My\ Head.otf);
+}
 /* Basic styles */
 *,
 *::after,
@@ -17,13 +20,14 @@ html {
 
 /* Variables */
 :root {
-    --primary: #D15B91;
-    --secondary: #A05868;
-    --yellow: #BFB63B;
-    --mustard: #B8B63E;
+    --primary: #41F2E1;
+    --secondary: #227364;
+    --light-turqoise: #41F2C0;
     --background: #B59A9E;
-    --light-white: #F2F2F2;
-    --dark: #2B2B2B;
+    --light-white: #DCE8F2;
+    --dark: #090B0D;
+    --transparent-dark: rgba(0, 0, 0, 0.8);
+    --title-font: 'Voice in my head';
     --primary-font: 'Shippori Antique B1', sans-serif;
     --secondary-font: 'Anton', sans-serif;
     --special-font: 'Sansita Swashed', sans-serif;
@@ -94,16 +98,42 @@ footer {
     background-image: url(../images/header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .header__content {
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "logo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.header__title {
-    font-family: var(--special-font);
-    color: var(--light-white);
+.header__content__title__box {
+    justify-content: start;
+    align-items: center;
+    border-radius: .5rem;
+    
+}
+
+.header__content--title {
+    grid-area: title;
+    font-family: var(--title-font);
+    color: var(--secondary);
     font-size: 5em;
+    padding: .2em;
+}
+
+.header__content__picture {
+    grid-area: logo;
+    grid-column-start: 2;
+    align-self: flex-end;
+    justify-self: end;
+}
+
+.header__content__picture-image {
+    width: 100%;
+    max-width: 4em;
 }
 /* End home */
