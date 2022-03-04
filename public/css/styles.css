@@ -1,9 +1,6 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Sansita+Swashed:wght@300&family=Shippori+Antique+B1&display=swap');
-@font-face {
-    font-family: Voice in my head;
-    src: url(../fonts/Voice\ In\ My\ Head.otf);
-}
+
 /* Basic styles */
 *,
 *::after,
@@ -27,7 +24,6 @@ html {
     --light-white: #DCE8F2;
     --dark: #090B0D;
     --transparent-dark: rgba(0, 0, 0, 0.8);
-    --title-font: 'Voice in my head';
     --primary-font: 'Shippori Antique B1', sans-serif;
     --secondary-font: 'Anton', sans-serif;
     --special-font: 'Sansita Swashed', sans-serif;
@@ -77,6 +73,7 @@ a {
 
 aside {
     grid-area: aside;
+    background-color: pink;
 }
 
 header {
@@ -85,20 +82,33 @@ header {
 
 section {
     grid-area: section;
+    background-color: green;
 }
 
 footer {
     grid-area: footer;
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        grid-template-areas: 
+        "aside aside aside aside"
+        "header header header header"
+        "section section section section"
+        "footer footer footer footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% auto;
+    }
 }
 
 /* End Layout */
 
 /* Home */
 .header {
-    background-image: url(../images/header.jpg);
+    background-image: url(../images/header.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
 
 .header__content {
@@ -106,21 +116,22 @@ footer {
     grid-template-areas: 
     "title"
     "logo";
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
 .header__content__title__box {
-    justify-content: start;
-    align-items: center;
+    grid-area: title;
+    grid-row-start: 2;
+    justify-self: center;
     border-radius: .5rem;
-    
+    background-color: var(--transparent-dark);
 }
 
 .header__content--title {
-    grid-area: title;
-    font-family: var(--title-font);
-    color: var(--secondary);
+    font-family: var(--special-font);
+    color: var(--light-white);
+    font-weight: bold;
     font-size: 5em;
     padding: .2em;
 }
