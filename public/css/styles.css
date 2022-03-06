@@ -22,7 +22,7 @@ html {
     --light-turqoise: #41F2C0;
     --background: #B59A9E;
     --light-white: #DCE8F2;
-    --dark: #090B0D;
+    --dark: #2b2b2b;
     --transparent-dark: rgba(0, 0, 0, 0.8);
     --primary-font: 'Shippori Antique B1', sans-serif;
     --secondary-font: 'Anton', sans-serif;
@@ -31,6 +31,8 @@ html {
 
 body {
     height: 100vh;
+    background-color: var(--dark) !important;
+    color: var(--light-white) !important;
 }
 /* End variables */
 
@@ -73,7 +75,6 @@ a {
 
 aside {
     grid-area: aside;
-    background-color: pink;
 }
 
 header {
@@ -82,12 +83,10 @@ header {
 
 section {
     grid-area: section;
-    background-color: green;
 }
 
 footer {
     grid-area: footer;
-    background-color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,6 +103,34 @@ footer {
 
 /* End Layout */
 
+/* Aside */
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside__item {
+    margin: 1em 0;
+}
+
+.aside__item__icon {
+    color: var(--light-white);
+    transition: all step-end;
+}
+
+.aside__item__icon:hover {
+    animation-name: aside__icons;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* End Aside */
+
+
 /* Home */
 .header {
     background-image: url(../images/header.svg);
@@ -116,14 +143,14 @@ footer {
     grid-template-areas: 
     "title"
     "logo";
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
 .header__content__title__box {
     grid-area: title;
     grid-row-start: 2;
-    justify-self: center;
+    justify-self: start;
     border-radius: .5rem;
     background-color: var(--transparent-dark);
 }
