@@ -18,36 +18,49 @@
     <!-- End CSS Files -->
 </head>
 <body id="home">
-    <aside class="aside">
-        <div class="aside__item">
-            <a href="">
-                <i class="fa-brands fa-github fa-2x aside__item__icon"></i>
-            </a>
-        </div>
-        <div class="aside__item">
-            <a href="">
-                <i class="fa-brands fa-linkedin fa-2x aside__item__icon"></i>
-            </a>
-        </div>
-        <div class="aside__item">
-            <a href="">
-                <i class="fa-brands fa-instagram fa-2x aside__item__icon"></i>
-            </a>
-        </div>
-        <div class="aside__item">
-            <a href="">
-                <i class="fa-brands fa-facebook fa-2x aside__item__icon"></i>
-            </a>
+    <aside class="aside display-column">
+        <div class="aside__box">
+            <div class="aside__item">
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-github fa-2x aside__item__icon"></i>
+                </a>
+            </div>
+            <div class="aside__item">
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2x aside__item__icon"></i>
+                </a>
+            </div>
+            <div class="aside__item">
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2x aside__item__icon"></i>
+                </a>
+            </div>
+            <div class="aside__item">
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-facebook fa-2x aside__item__icon"></i>
+                </a>
+            </div>
+            <div class="display-row aside__bottom">
+                <div class="aside__item">
+                      <div class="form-check form-switch theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input class="form-check-input" type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                      </label>
+                    </div>
+                </div>
+            </div>
         </div>
     </aside>
+    
     <header class="header">
         <div class=" header__content container">
             <div class="display-row header__content__title__box">
                 <h1 class="header__content--title">Altrion</h1>
             </div>
-            <picture class="header__content__picture">
+            <!-- <picture class="header__content__picture">
                  <img src="public/images/icon.png" alt="Altrion Icon" class="header__content__picture-image">
-            </picture>
+            </picture> -->
         </div>
     </header>
     <section>
@@ -60,5 +73,6 @@
     <!-- JS Files -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="public/js/bootstrap.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
 </html>
