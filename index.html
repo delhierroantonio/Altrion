@@ -18,57 +18,87 @@
     <!-- End CSS Files -->
 </head>
 <body id="home">
+    <!-- Aside bar -->
     <aside class="aside display-column">
-        <div class="aside__box">
-            <div class="aside__item">
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-github fa-2x aside__item__icon"></i>
-                </a>
-            </div>
-            <div class="aside__item">
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-linkedin fa-2x aside__item__icon"></i>
-                </a>
-            </div>
-            <div class="aside__item">
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-instagram fa-2x aside__item__icon"></i>
-                </a>
-            </div>
-            <div class="aside__item">
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-facebook fa-2x aside__item__icon"></i>
-                </a>
-            </div>
-            <div class="display-row aside__bottom">
-                <div class="aside__item">
-                      <div class="form-check form-switch theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input class="form-check-input" type="checkbox" id="checkbox" />
-                            <div class="slider round"></div>
-                      </label>
-                    </div>
-                </div>
-            </div>
+        <div class="aside__item">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-github fa-2x icon"></i>
+            </a>
+        </div>
+        <div class="aside__item">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2x icon"></i>
+            </a>
+        </div>
+        <div class="aside__item">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-instagram fa-2x icon"></i>
+            </a>
+        </div>
+        <div class="aside__item">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-facebook fa-2x icon"></i>
+            </a>
         </div>
     </aside>
-    
+    <!-- End aside bar -->
+
+    <!-- Header -->
     <header class="header">
-        <div class=" header__content container">
+        <div class=" header__content container-box">
             <div class="display-row header__content__title__box">
                 <h1 class="header__content--title">Altrion</h1>
             </div>
-            <!-- <picture class="header__content__picture">
-                 <img src="public/images/icon.png" alt="Altrion Icon" class="header__content__picture-image">
-            </picture> -->
         </div>
     </header>
+    <!-- End header -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar--color">
+        <ul class="container-box navbar__box">
+            <div class="navbar__box__item navbar-logo">
+                <picture class="navbar__icon__box">
+                    <img src="public/images/icon.png" class="navbar__icon__box-image" alt="Altrion icon">
+                </picture>
+            </div>
+            <div class="navbar__box__item navbar-list">
+                <li class="navbar-list__item">
+                    <a class="navbar-item" href="">Home</a>
+                </li>
+                <li class="navbar-list__item">
+                    <a class="navbar-item" href="">About us</a>
+                </li>
+                <li class="navbar-list__item">
+                    <a class="navbar-item" href="">Our works</a>
+                </li>
+                <li class="navbar-list__item">
+                    <a class="navbar-item" href="">Contact</a>
+                </li>
+            </div>
+            <div class="navbar__box__item navbar-switch">
+                <div class="form-check form-switch theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input class="form-check-input" type="checkbox" id="checkbox" />
+                    </label>
+                </div>
+                <i class="fa-solid fa-moon fa-2x navbar-icon"></i>
+                <i class="fa-solid fa-sun fa-2x navbar-icon"></i>
+            </div>
+        </ul>
+    </nav>
+    <!-- End navbar -->
+
+    <!-- Sections -->
     <section>
         <h1>Section</h1>
     </section>
+    <!-- End sections -->
+
+    <!-- Footer -->
     <footer>
         <h1>Footer</h1>
     </footer>
+    <!-- End footer -->
 
     <!-- JS Files -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

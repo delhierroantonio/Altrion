@@ -23,10 +23,12 @@ html {
     --bg-color: #f2f2f2;
     --font-color: #2b2b2b;
     --transparent-dark: rgba(0, 0, 0, 0.8);
+    --icon-color: #2b2b2b;
+    --nav-color: #2b2b2b;
+    --nav-font-color: #f2f2f2;
     --primary-font: 'Shippori Antique B1', sans-serif;
     --secondary-font: 'Anton', sans-serif;
     --special-font: 'Sansita Swashed', sans-serif;
-    --icon-color: #2b2b2b;
 }
 
 [data-theme="dark"] {
@@ -35,6 +37,8 @@ html {
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --icon-color: #f2f2f2;
+    --nav-color: #f2f2f2;
+    --nav-font-color: #2b2b2b;
 }
 
 body {
@@ -43,6 +47,31 @@ body {
     color: var(--font-color) !important;
 }
 /* End variables */
+
+/* Icons */
+.icon {
+    color: var(--icon-color);
+    transition: all step-end;
+}
+
+.icon:hover {
+    animation-name: aside__icons;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.navbar-icon {
+    color: var(--nav-font-color);
+    transition: all step-end;
+}
+
+.navbar-icon:hover {
+    animation-name: aside__icons;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* End icons */
 
 /* Helpers */
 
@@ -55,17 +84,17 @@ body {
     flex-direction: column;
 }
 
-.container {
+.container-box {
     max-width: 1080px;
     margin: 0 auto;
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: none !important;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* End Helpers
@@ -75,10 +104,11 @@ a {
     display: grid;
     grid-template-areas: 
     "aside header header header"
+    "aside navbar navbar navbar"
     "aside section section section"
     "aside footer footer footer";
     grid-template-columns: 3%;
-    grid-template-rows: 30% 1fr 1fr;
+    grid-template-rows: 30% 5rem 1fr 1fr;
 }
 
 aside {
@@ -87,6 +117,10 @@ aside {
 
 header {
     grid-area: header;
+}
+
+nav {
+    grid-area: navbar;
 }
 
 section {
@@ -102,6 +136,7 @@ footer {
         grid-template-areas: 
         "aside aside aside aside"
         "header header header header"
+        "navbar navbar navbar navbar"
         "section section section section"
         "footer footer footer footer";
         grid-template-columns: 1fr;
@@ -112,47 +147,27 @@ footer {
 /* End Layout */
 
 /* Aside */
-
 .aside {
+    position: fixed;
+    top: 40vh;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 0 0.3rem;
 }
 
 .aside__box{
-    display: grid;
-    grid-template-areas:
-    "icon"
-    "icon"
-    "icon"
-    "icon"
-    "button";
-    grid-template-rows: 2fr 2fr 2fr 2fr 6fr;
+    margin: 2rem 0;
 }
 
 .aside__item {
     margin: 1em 0;
 }
 
-.aside__item__icon {
-    grid-area: icon;
-    color: var( --icon-color);
-    transition: all step-end;
-}
-
-.aside__item__icon:hover {
-    animation-name: aside__icons;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-.aside__bottom {
-    grid-area: button;
-    align-self: flex-end;
-}
-
 @media screen and (max-width: 768px) {
     .aside {
+        position: relative;
+        top: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -168,7 +183,6 @@ footer {
         margin: 0 1rem;
     }
 }
-
 
 /* End Aside */
 
@@ -205,16 +219,56 @@ footer {
     padding: .2em;
 }
 
-.header__content__picture {
-    grid-area: logo;
-    grid-column-start: 2;
-    align-self: flex-end;
+/* End home */
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--nav-color);
+    width: 100%;
+}
+
+.navbar__box {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+.navbar__box__item {
+    align-self: center;
+}
+
+.navbar-logo {
+    justify-self: start;
+}
+
+.navbar-list {
+    justify-self: center;
+    display: flex;
+}
+
+.navbar-switch {
+    display: flex;
     justify-self: end;
 }
 
-.header__content__picture-image {
+.navbar__icon__box-image {
     width: 100%;
-    max-width: 4em;
+    min-width: 2rem;
+    max-width: 2rem;
 }
-/* End home */
+
+.navbar-list__item {
+    margin: 0 1rem;
+}
+
+.navbar-item {
+    color: var(--nav-font-color);
+    font-family: var(--primary-font);
+}
+
+.dark__mode-text {
+    color: var(--nav-font-color);
+    font-family: var(--primary-font);
+}
+/* End navbar */
 

@@ -6,6 +6,6 @@
     }
     to {
         transform: rotate(360deg);
-        color: var(--primary);
+        color: var(--primary-color);
     }
 }
